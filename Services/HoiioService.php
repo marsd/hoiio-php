@@ -1,8 +1,9 @@
 <?php
 
-function __autoload($class_name) {
+spl_autoload_register(function ($class_name) {
     require_once('lib/'. $class_name. '.php');
-}
+});
+
 
 /**
  * Public interface to access Hoiio API.
